@@ -1,0 +1,40 @@
+# RT-DETR v2 Requirements - Hugging Face Transformers
+# Tested on: Windows 10, Python 3.10.1, CUDA 12.4, RTX 4080 SUPER
+
+# Core Dependencies - GPU (CUDA 12.4) Versions
+# Install PyTorch with CUDA support first:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+
+torch>=2.4.0
+torchvision>=0.19.0
+transformers>=4.35.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Scientific Computing
+numpy>=1.24.0,<2.0.0
+scipy>=1.10.0
+
+# Progress Bars and Utilities
+tqdm>=4.65.0
+
+# Training Utilities
+accelerate>=0.24.0  # For Hugging Face Trainer
+datasets>=2.14.0     # Optional: For dataset handling
+
+# Logging (Optional but recommended)
+tensorboard>=2.14.0
+# wandb>=0.15.0      # Uncomment for W&B logging
+
+# Evaluation (Optional)
+# pycocotools>=2.0.6  # For COCO mAP evaluation (requires Visual C++ Build Tools on Windows)
+
+# Installation Instructions:
+# 1. For GPU training (CUDA 12.4):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+#    pip install -r requirements.txt
+#
+# 2. For CPU-only training:
+#    pip install torch torchvision
+#    pip install -r requirements.txt
